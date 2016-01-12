@@ -1,10 +1,10 @@
 -------------------------------------------------------
  T E S T S
 -------------------------------------------------------
-Running programrepairtest.ATest
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 sec
 Running programrepairtest.BTest
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.132 sec - in programrepairtest.BTest
+Running programrepairtest.ATest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in programrepairtest.ATest
 
 Results :
 
@@ -13,7 +13,7 @@ Tests run: 6, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 1.660 s
-[INFO] Finished at: 2016-01-12T10:55:58+01:00
-[INFO] Final Memory: 14M/133M
+[INFO] Total time: 2.685 s
+[INFO] Finished at: 2016-01-12T12:14:04+01:00
+[INFO] Final Memory: 14M/138M
 [INFO] ------------------------------------------------------------------------
