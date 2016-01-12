@@ -24,19 +24,12 @@ line=`grep -m 1 -n "^-" ../logs/previous-test.log | cut -f 1 -d :`
 tail -n +$line ../logs/previous-test.log > ../logs/previous-test.log.tmp
 mv ../logs/previous-test.log.tmp ../logs/previous-test.log
 
-git checkout master
-
-############################
-# Process logs here        #
-############################
-
-
-
 ############################
 # Java jar processing here #
 ############################
 
 
+git checkout master
 
 mvn clean test 1> ../logs/after-test.log
 
