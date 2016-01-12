@@ -1,4 +1,5 @@
 #!/bin/bash
+mvn clean package
 
 rm -rf tmp/
 mkdir tmp/
@@ -9,6 +10,9 @@ cd tmp/
 git clone https://github.com/rsommerard/program-repair-test.git
 
 cd program-repair-test/
+
+cp ../../target/program-repair-0.0.1-SNAPSHOT-jar-with-dependencies.jar ./
+
 mvn clean test 1> ../logs/current-test.log
 
 line=`grep -m 1 -n "^-" ../logs/current-test.log | cut -f 1 -d :`
@@ -27,7 +31,7 @@ mv ../logs/previous-test.log.tmp ../logs/previous-test.log
 ############################
 # Java jar processing here #
 ############################
-
+java -jar program-repair-0.0.1-SNAPSHOT-jar-with-dependencies.jar
 
 git checkout master
 
