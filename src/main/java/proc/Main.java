@@ -30,9 +30,10 @@ public class Main {
 			if (flag) {
 				if (line.isEmpty()) {
 					flag = false;
+					continue;
 				}
 				
-				tests.add(line);
+				tests.add(line.trim());
 			}
 			
 		    if (line.contains("Failed tests:")) {
@@ -42,9 +43,11 @@ public class Main {
 		}
 		
 		for(String test : tests) {
-			String tmp = test.split(":")[0];
-			String className = tmp.split(".")[0];
-			String methodName = tmp.split(".")[1];
+			String className = test.split("\\.")[0];
+			String methodName = test.split("\\.")[1].split(":")[0];
+			
+			System.out.println(className);
+			System.out.println(methodName);
 		}
 	}
 }
