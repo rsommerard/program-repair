@@ -10,6 +10,7 @@ cd tmp/
 git clone https://github.com/rsommerard/program-repair-test.git
 
 cp -R program-repair-test/ program-repair-test-previous/
+cp -R program-repair-test/ program-repair-test-after/
 mv program-repair-test/ program-repair-test-current/
 
 cd program-repair-test-current/
@@ -37,7 +38,7 @@ mv ../logs/previous-test.log.tmp ../logs/previous-test.log
 cd ../../
 java -jar program-repair-0.0.1-SNAPSHOT-jar-with-dependencies.jar
 
-cd tmp/program-repair-test-current/
+cd tmp/program-repair-test-after/
 
 mvn clean test 1> ../logs/after-test.log
 

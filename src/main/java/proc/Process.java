@@ -67,8 +67,7 @@ public class Process {
 			//spoon.run(new String[] { "-i", "src/", "-x" });
 			spoon.run(new String[] { "-i", "tmp/program-repair-test-current/src/", "-x" });
 			
-			Runtime.getRuntime().exec("mv spooned/programrepairtest/" + className + ".java tmp/program-repair-test-current/src/main/java/programrepairtest/" + className + ".java");
-			
+			Runtime.getRuntime().exec("mv spooned/programrepairtest/" + className + ".java tmp/program-repair-test-after/src/main/java/programrepairtest/" + className + ".java");
 		}
 	}
 
